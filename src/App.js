@@ -1,14 +1,22 @@
+import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
 import "./App.css"
-import styles from "./App.module.css"
-import Hello from "./component/Hello"
-import Welcome from "./component/Welcome"
+import Day from "./component/Day";
+import DayList from "./component/DayList";
+import Header from "./component/Header";
 
 function App() {
   return (
-    <div className="App">
-        <Hello />
-        
-    </div>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+            <Routes>
+              <Route path="/" element={<DayList />} />
+              <Route path="/day" element={<Day />} />
+              
+             
+            </Routes>
+        </div>
+      </BrowserRouter>
   );
 }
 
