@@ -4,13 +4,18 @@ import { useState } from 'react';
 function Word({word}) {
 
     const [isShow, setIsShow] = useState(false);
+    const [isDone, setIsDone] = useState(word.isDone)
     function toggleShow(){
         setIsShow(!isShow)
     }
+    function toggleDone(){
+        setIsDone(!isDone)
+    }
     return ( 
         <>
-         <tr className={word.isDone ? 'off' : 'on'}>
-             <td><input type="checkbox" checked={word.isDone}></input></td>
+         <tr className={isDone ? 'off' : 'on'}>
+             <td>
+                <input type="checkbox" checked={isDone} onChange={toggleDone}></input></td>
              <td>
                  {word.eng}
              </td>
@@ -27,5 +32,5 @@ function Word({word}) {
         </>
      );
 }
-
+``
 export default Word;
