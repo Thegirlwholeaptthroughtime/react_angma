@@ -1,26 +1,23 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import wordData from '../db/data.json'
+import Word from './Word';
 
 
 function Day() {
 
-    const day = 1;
+    const day = useParams().day;
     const wordList = wordData.words.filter(word =>
-            word.day === 1
+            word.day === Number(day)
         ) 
-    console.log(wordList)
+  
+
     return ( 
         <>
+            <h2>Day {day}</h2>
             <table>
                 {wordList.map(word => (
-                    <tr key={word.id}>
-                         <td>
-                            {word.eng}
-                        </td>
-                        <td>
-                            {word.kor}
-                        </td>
-                    </tr>
+                   <Word word={word} key={word.id}/>
                 ))}
                
             </table>
