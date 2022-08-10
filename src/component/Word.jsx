@@ -9,7 +9,20 @@ function Word({word}) {
         setIsShow(!isShow)
     }
     function toggleDone(){
-        setIsDone(!isDone)
+        //setIsDone(!isDone)
+        fetch(`http://localhost:3001/words/${word.id}`, {
+            method: "PUT",
+            headers :{
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify({
+                ...word,
+                isDone:!isDone
+            }),
+        })
+        .then(res =>{
+            
+        })
     }
     return ( 
         <>
@@ -32,5 +45,5 @@ function Word({word}) {
         </>
      );
 }
-``
+
 export default Word;
