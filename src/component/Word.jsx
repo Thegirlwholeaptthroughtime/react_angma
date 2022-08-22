@@ -10,18 +10,16 @@ function Word({word}) {
     }
     function toggleDone(){
         //setIsDone(!isDone)
-        fetch(`http://localhost:3001/words/${word.id}`, {
-            method: "PUT",
-            headers :{
-                'Content-Type' : 'application/json'
+
+        fetch(`http://localhost:3001/words/${word.id}`,{
+            method : 'PUT',
+            headers : {
+                'Content-Type' : 'application/json',
             },
-            body: JSON.stringify({
+            body:JSON.stringify({
                 ...word,
-                isDone:!isDone
+                isDone :!isDone,
             }),
-        })
-        .then(res =>{
-            
         })
     }
     return ( 

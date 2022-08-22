@@ -8,6 +8,10 @@ body {
   font-size: 20px;
 }
 
+*{
+  padding: 0;
+  margin: 0;
+}
 ol,
 ul {
   margin: 0;
@@ -26,18 +30,20 @@ a {
 }
 
 .App {
-  width: 800px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .header {
   position: relative;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header .menu {
-  position: absolute;
-  top: 10px;
-  right: 0;
+.header h1 {
+  font-size: 30px;
 }
 
 .header .link {
@@ -47,17 +53,21 @@ a {
   background-color: #efefef;
   font-weight: bold;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 .list_day {
   display: flex;
   flex-wrap: wrap;
+  justify-self: unset;
+  justify-content: center;
 }
 
 .list_day li {
-  flex: 20% 0 0;
+  flex: 20% 0;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 30px 0;
+ 
 }
 
 .list_day a {
