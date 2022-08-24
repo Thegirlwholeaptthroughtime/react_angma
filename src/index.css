@@ -60,7 +60,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-self: unset;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .list_day li {
@@ -140,3 +140,8 @@ button {
   height: 40px;
   font-size: 20px;
 }
+
+.day{
+  padding: 30px;
+}
+
