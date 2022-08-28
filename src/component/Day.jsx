@@ -14,7 +14,7 @@ function Day() {
     const [words, setWords] = useState([])
     
     useEffect(()=>{
-        fetch(`http://localhost:3001/words?day=${day}`)
+        fetch(`http://localhost:3002/words?day=${day}`)
         .then(res=> {
            return res.json();
         })

@@ -12,7 +12,7 @@ function DayList() {
    //   fetch("http://localhost:3001/days")
    //   .then(res=> {
    //      return res.json();
-   //   })
+   //   })npm 
    //   .then(data => {
    //      setDays(data)
    //      console.log(data)
@@ -20,8 +20,8 @@ function DayList() {
    //},[])
    //렌더링결과가 실제dom에 찍혔을때
 
-   const days = useFetch("http://localhost:3001/days")
-
+   const days = useFetch("http://localhost:3002/days")
+   console.log(days)
    
    return ( 
       <ul className="list_day">

@@ -1,51 +1,32 @@
 {
-    "days" : [
-        {"id" :1, "day" :1},
-        {"id" :2, "day" :2},
-        {"id" :3, "day" :3}
-    ],
-    "words" : [
-        {
-            "id": 1,
-            "day": 1,
-            "eng": "book",
-            "kor" : "책",
-            "isDone":true
-        },
-        {
-            "id": 2,
-            "day": 1,
-            "eng": "apple",
-            "kor" : "사과",
-            "isDone":false
-        },
-        {
-            "id": 3,
-            "day": 2,
-            "eng": "wtaps",
-            "kor" : "더블탭스",
-            "isDone":false
-        },
-        {
-            "id": 4,
-            "day": 2,
-            "eng": "radiall",
-            "kor" : "라디얼",
-            "isDone":false
-        },
-        {
-            "id": 5,
-            "day": 3,
-            "eng": "stussy",
-            "kor" : "스투시",
-            "isDone":false
-        },
-        {
-            "id": 6,
-            "day": 3,
-            "eng": "milk",
-            "kor" : "물",
-            "isDone":false
-        }
-    ]
+  "days": [
+    {
+      "id": 1,
+      "day": 1
+    },
+    {
+      "id": 2,
+      "day": 2
+    },
+    {
+      "id": 3,
+      "day": 3
+    }
+  ],
+  "words": [
+    {
+      "id": 3,
+      "day": 2,
+      "eng": "wtaps",
+      "kor": "더블탭스",
+      "isDone": false
+    },
+    {
+      "id": 4,
+      "day": 2,
+      "eng": "radiall",
+      "kor": "라디얼",
+      "isDone": false
+    }
+  ]
 }
