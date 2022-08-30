@@ -10,7 +10,8 @@ function Word({word : w}) {
     }
 
     const handleCheck = () =>{
-        fetch(`http://localhost:3002/words/${word.id}`,
+        //fetch(`http://localhost:3001/words/${word.id}`,
+        fetch(`http://localhost:3001/words/${word.id}`,
         {
             //요청의옵션들
             method : "PUT",
@@ -32,7 +33,7 @@ function Word({word : w}) {
 
     const del = () => {
         if(window.confirm('삭제할라고?')){
-            fetch(`http://localhost:3002/words/${word.id}`,{
+            fetch(`http://localhost:3001/words/${word.id}`,{
                 method : "DELETE",
         }).then(res =>{
             if(res.ok){
