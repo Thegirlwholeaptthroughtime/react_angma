@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-
+import axios from "axios";
 function Word({word : w}) {
     const [word, setWord] = useState(w);
     const [isShow, setIsShow] = useState(false);
@@ -32,14 +32,15 @@ function Word({word : w}) {
 
 
     const del = () => {
-        if(window.confirm('삭제할라고?')){
-            fetch(`http://localhost:3001/words/${word.id}`,{
-                method : "DELETE",
-        }).then(res =>{
-            if(res.ok){
-                setWord({id:0})
-            }
-        })
+        if (window.confirm('삭제할라고?')) {
+            axios.delete(`http://localhost:3001/words/${word.id}`)
+                .then(res => {
+                    if (res.ok) {
+                        setWord({
+                            id: 0
+                        })
+                    }
+                })
         }
     }
     if(word.id===0){

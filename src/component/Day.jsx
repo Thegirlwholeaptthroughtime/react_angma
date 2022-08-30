@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from '../hooks/useFetch';
+import useGet from '../hooks/useGet';
 import Word from './Word';
 
 function Day() {
     const { day } = useParams();
-    const words = useFetch(`http://localhost:3001/words?day=${day}`)
-    
+    const words = useGet(`http://localhost:3001/words?day=${day}`)
+    console.log(words)
     return ( 
         <> 
         <h2 className='day'>Day{day}</h2>
